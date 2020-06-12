@@ -1,0 +1,135 @@
+<html>
+    <head>
+        <title>Technical Documentation</title>
+        <link rel="stylesheet" type="text/css" href="./style.css">
+    </head>
+    <body>
+        <nav id="navbar">
+            <header>React Documentation</header>
+            <ul>
+               <a class="nav-link" href="#Introduction" rel="internal"><li>Introduction</li></a>
+               <a class="nav-link" href="#Introducing_JSX" rel="internal"><li>Introducing JSX</li></a>
+               <a class="nav-link" href="#Rendering_Elements" rel="internal"><li>Rendering Elements</li></a>
+               <a class="nav-link" href="#Components_And_Props" rel="internal"><li>Components And Props</li></a>
+               <a class="nav-link" href="#State_And_Lifecycle" rel="internal"><li>State and Lifecycle</li></a>
+               <a class="nav-link" href="#Handling_Events" rel="internal"><li>Handling Events</li></a>
+               <a class="nav-link" href="#Conditional_Rendering" rel="internal"><li>Conditional Rendering</li></a>
+               <a class="nav-link" href="#Lists_And_Keys" rel="internal"><li>Lists and Keys</li></a>
+               <a class="nav-link" href="#Forms" rel="internal"><li>Forms</li></a>
+        </nav>
+        <main id="main-doc">
+            <section class="main-section" id="Introduction">
+                <header>Introduction</header>
+                <article>
+                    <p>It displays a heading saying “Hello, world!” on the page.</p>
+                    <code>
+                        ReactDOM.render(
+                            Hello, world!,
+                            document.getElementById('root')
+                        );
+                    </code>
+                </article>
+            </section>
+            <section class="main-section" id="Introducing_JSX">
+                <header>Introducing JSX</header>
+                <h3>Consider this variable declaration:</h3>
+                <code>const element = Hello, world!;</code>
+                <article>
+                    <p>This funny tag syntax is neither a string nor HTML.</p>
+                    <p>It is called JSX, and it is a syntax extension to JavaScript. We recommend using it with React to describe what the UI should look like. JSX may remind you of a template language, but it comes with the full power of JavaScript.</p>
+                    <p>JSX produces React “elements”. We will explore rendering them to the DOM in the next section. Below, you can find the basics of JSX necessary to get you started.</p>
+                </article>
+            </section>
+
+            <section class="main-section" id="Rendering_Elements">
+                <header>Rendering Elements</header>
+                <h3>Elements are the smallest building blocks of React apps.</h3>
+
+                <p>An element describes what you want to see on the screen:</p>
+                <article>
+                    <code>const element = Hello, world;</code>
+                    <p>Unlike browser DOM elements, React elements are plain objects, and are cheap to create. React DOM takes care of updating the DOM to match the React elements.</p>
+                </article>
+            </section>
+
+            <section class="main-section" id="Components_And_Props">
+                <header>Components And Props</header>
+                <article>
+                    <p>Components let you split the UI into independent, reusable pieces, and think about each piece in isolation. This page provides an Introduction to the idea of components. You can find a detailed component API reference here.</p>
+                    <p>Conceptually, components are like JavaScript functions. They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen</p>
+                    <code>
+                        class Welcome extends React.Component {
+                            render() {
+                              return Hello, {this.props.name};
+                            }
+                          }
+                    </code>
+                </article>     
+            </section>
+            <section class="main-section" id="State_And_Lifecycle">
+                <header>State And Lifecycle</header>
+                <article>
+                    <p>This page introduces the concept of state and lifecycle in a React component. You can find a detailed component API reference here.</p>
+                    <p>Consider the ticking clock example from one of the previous sections. In Rendering Elements, we have only learned one way to update the UI. We call ReactDOM.render() to change the rendered output:</p>
+                    <code>
+                        function tick() {
+                            const element = (
+                                Hello, world!
+                                It is {new Date().toLocaleTimeString()}.
+                            );
+                            ReactDOM.render(
+                              element,
+                              document.getElementById('root')
+                            );
+                        }
+                        setInterval(tick, 1000);
+                    </code>
+                </article>
+            </section>
+            <section class="main-section" id="Handling_Events">
+                <header>Handling Events</header>
+                <article>
+                    <p>Handling events with React elements is very similar to handling events on DOM elements. There are some syntax differences:</p>
+                    <ul>
+                        <li>React events are named using camelCase, rather than lowercase.</li>
+                        <li>With JSX you pass a function as the event handler, rather than a string.</li>
+                    </ul>
+                </article>
+            </section>
+            <section class="main-section" id="Conditional_Rendering">
+                <header>Conditional Rendering</header>
+                <article>
+                    <p>In React, you can create distinct components that encapsulate behavior you need. Then, you can render only some of them, depending on the state of your application.</p>
+                    <p>Conditional rendering in React works the same way conditions work in JavaScript. Use JavaScript operators like if or the conditional operator to create elements representing the current state, and let React update the UI to match them.</p>
+                </article>
+            </section>
+            <section class="main-section" id="Lists_And_Keys">
+                <header>Lists And Keys</header>
+                <article>
+                    <h3>First, let’s review how you transform lists in JavaScript.</h3>
+                    <p>Given the code below, we use the map() function to take an array of numbers and double their values. We assign the new array returned by map() to the variable doubled and log it:</p>
+                    <code>
+                        const numbers = [1, 2, 3, 4, 5];
+                        const doubled = numbers.map((number) => number * 2);
+                        console.log(doubled);
+                    </code>
+                    <p>This code logs [2, 4, 6, 8, 10] to the console.</p>
+                </article>
+            </section>
+            <section class="main-section" id="Forms">
+                <header>Forms</header>
+                <h3>HTML form elements work a little bit differently from other DOM elements in React, because form elements naturally keep some internal state. For example, this form in plain HTML accepts a single name:</h3>
+                <article>
+                    Following are some of the tags used:
+                    <ul>
+                        <li>The textarea Tag</li>
+                        <li>The select Tag</li>
+                        <li>The file input Tag</li>
+                    </ul>
+                </article>
+            </section>
+        </main>
+        <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>  
+
+    </body>
+</html>
